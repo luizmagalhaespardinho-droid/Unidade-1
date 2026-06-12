@@ -1,41 +1,147 @@
 <!DOCTYPE html>
-<html lang="pt"></html>
+<html lang="pt">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" />
+  <title>Confere Aí</title>
+  <style>
+    /* Reset simples */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-<meta charset="UTF-8">
-<meta name="viwerpoint" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css" />
-<title>Document</title>
+    body {
+      background-color: #f0f2f5;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
+    header.cabecalho {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header.cabecalho nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-weight: bold;
+    }
+
+    main {
+      flex: 1;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    /* Cartão flip */
+    .cartao {
+      perspective: 1000px;
+      width: 300px;
+      height: 400px;
+      margin-bottom: 20px;
+    }
+
+    .cartao-interno {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+
+    .cartao:hover .cartao-interno {
+      transform: rotateY(180deg);
+    }
+
+    .cartao-frente,
+    .cartao-verso {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .cartao-frente {
+      background-color: #fff;
+    }
+
+    .cartao-verso {
+      background-color: #f9f9f9;
+      transform: rotateY(180deg);
+    }
+
+    .cartao-imagem {
+      width: 100%;
+      height: 70%;
+      object-fit: cover;
+    }
+
+    .cartao p {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #333;
+      color: white;
+    }
+  </style>
 </head>
 
+<body>
+  <header class="cabecalho">
+    <h1>Confere Aí</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
 
-<header class="cabecalho"> 
-  <h1>Confere Aí</h1> 
-  <nav> 
-    <a href="#">Início</a> 
-  </nav> 
-</header> 
+  <main>
+    <h2>Descubra a verdade passando o mouse</h2>
+    <section>
+      <article class="cartao">
+        <div class="cartao-interno">
+          <div class="cartao-frente">
+            <img src="https://i.postimg.cc/VLK2nqTN/Dinossauro-Engracado.jpg" alt="Pinguim" class="cartao-imagem">
+            <p>Pinguins conseguem voar como pássaros!</p>
+          </div>
+          <div class="cartao-verso">
+            <img src="https://i.postimg.cc/R0VZZZGZ/image.jpg" alt="Pinguim" class="cartao-imagem">
+            <p>Pinguins não voam, mas são excelentes nadadores.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
 
-<main> 
-  <h2>Descubra a verdade passando o mouse</h2> 
-  <section> 
-    <article class="cartao"> 
-      <div class="cartao-interno"> 
-        <div class=""cartao-frente> 
-          <img src="https://i.postimg.cc/VLK2nqTN/Dinossauro-Engracado.jpg" alt="Pinguim" class="cartao-imagem"> 
-          <p>Pinguins conseguem voar como pássaros!</p> 
-        </div> 
-        <div class="cartao-verso"> 
-          <img src="https://i.postimg.cc/R0VZZZGZ/image.jpg" alt="Pinguim" class="cartao-imagem"> 
-          <p>Pinguins não voam, mas são excelentes nadadores.</p> 
-        </div> 
-      </div> 
-    </article> 
-  </section> 
-</main> 
+  <footer>
+    <p>Projeto feito por Luiz Miguel</p>
+  </footer>
+</body>
 
-<footer> 
-  <p>Projeto feito por [Luiz Miguel]</p> 
-</footer> 
+</html>
