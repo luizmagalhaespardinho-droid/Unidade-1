@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css" />
   <title>Confere Aí</title>
+
   <style>
     /* Reset simples */
     * {
@@ -49,12 +49,18 @@
       margin-bottom: 30px;
     }
 
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
     /* Cartão flip */
     .cartao {
       perspective: 1000px;
       width: 300px;
       height: 400px;
-      margin-bottom: 20px;
     }
 
     .cartao-interno {
@@ -100,6 +106,7 @@
     .cartao p {
       padding: 10px;
       font-size: 16px;
+      font-weight: bold;
     }
 
     footer {
@@ -123,19 +130,60 @@
 
   <main>
     <h2>Descubra a verdade passando o mouse</h2>
+
     <section>
+
+      <!-- Cartão 1 -->
       <article class="cartao">
         <div class="cartao-interno">
           <div class="cartao-frente">
-            <img src="https://i.postimg.cc/VLK2nqTN/Dinossauro-Engracado.jpg" alt="Pinguim" class="cartao-imagem">
+            <img src="https://i.postimg.cc/VLK2nqTN/Dinossauro-Engracado.jpg" alt="Pinguim"
+              class="cartao-imagem">
             <p>Pinguins conseguem voar como pássaros!</p>
           </div>
+
           <div class="cartao-verso">
-            <img src="https://i.postimg.cc/R0VZZZGZ/image.jpg" alt="Pinguim" class="cartao-imagem">
+            <img src="https://i.postimg.cc/R0VZZZGZ/image.jpg" alt="Pinguim"
+              class="cartao-imagem">
             <p>Pinguins não voam, mas são excelentes nadadores.</p>
           </div>
         </div>
       </article>
+
+      <!-- Cartão 2 -->
+      <article class="cartao">
+        <div class="cartao-interno">
+          <div class="cartao-frente">
+            <img src="https://images.unsplash.com/photo-1547721064-da6cfb341d50?w=600"
+              alt="Girafa" class="cartao-imagem">
+            <p>Girafas têm o pescoço curto para alcançar comida.</p>
+          </div>
+
+          <div class="cartao-verso">
+            <img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=600"
+              alt="Girafa" class="cartao-imagem">
+            <p>Na verdade, girafas têm o pescoço longo para alcançar folhas altas.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Cartão 3 -->
+      <article class="cartao">
+        <div class="cartao-interno">
+          <div class="cartao-frente">
+            <img src="https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?w=600"
+              alt="Tartaruga" class="cartao-imagem">
+            <p>Tartarugas conseguem correr muito rápido.</p>
+          </div>
+
+          <div class="cartao-verso">
+            <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=600"
+              alt="Tartaruga" class="cartao-imagem">
+            <p>Tartarugas são lentas, mas se protegem com sua carapaça.</p>
+          </div>
+        </div>
+      </article>
+
     </section>
   </main>
 
